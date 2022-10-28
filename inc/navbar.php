@@ -60,7 +60,7 @@
 							<a class="dropdown-item" href="index.php?vista=product_category">Por categoria</a>
 							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/buscarproductos.php">Buscar</a>
 
-					
+			
 						</div>
 					</li>
 				</ul>

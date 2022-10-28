@@ -1,6 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
+
 <head>
+
 	<title>Buscar Usuarios</title>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -17,11 +20,12 @@
 			posicionamiento, así que asegúrese de usar elementos separados y anidados para .nav-item y .nav-link como se muestra 
 			a continuación. 
 		-->
-<header>
+		<header>
 	<div class="contenedor-principal">
-		
 		<nav class="navbar navbar-expand-lg " style="background:#39A900;">
+			<a href="http://localhost/INVENTARIO-FRONTEND/index.php?vista=home">
 			<img src="/INVENTARIO-FRONTEND/img/logosena.JPG">
+			</a>
 	
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -54,22 +58,24 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="index.php?vista=product_new">Nuevo</a>
-							<a class="dropdown-item" href="index.php?vista=product_list">Lista</a>
-							<a class="dropdown-item" href="index.php?vista=product_category">Por categoria</a>
-							<a class="dropdown-item" href="index.php?vista=product_search">Buscar</a>
+							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/nuevoproducto.php">Nuevo</a>
+							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/listaproductos.php">Lista</a>
+							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/productocategoria.php">Por categoria</a>
+							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/buscarproductos.php">Buscar</a>
 
-					
+			
 						</div>
 					</li>
 				</ul>
 			</div>
+
+	
 			<div class="row">
 				<div class="col">
 				<a href="actualizar.php?;?>" <button type="button" class="  btn btn-primary" style=" margin-top:-5px; margin-right:100px; "> Mi Cuenta </a> </button>
 				</div>
 			</div>
-			<a href="index.php?vista=logout" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesion </a></button>
+			<a href="../index.php" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesion </a></button>
 	</div>
 	</div>
 	</div>

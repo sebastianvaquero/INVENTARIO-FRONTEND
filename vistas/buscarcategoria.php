@@ -3,9 +3,9 @@
 
 <head>
 
-		<title>Registrar Categorias</title>
-<!-- Required meta tags -->
-<meta charset="utf-8">
+		<title>Buscar Categorias</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
@@ -20,7 +20,7 @@
 			a continuación. 
 		-->
 		<header>
-	<div class="contenedor-principal">
+		<div class="contenedor-principal">
 		<nav class="navbar navbar-expand-lg " style="background:#39A900;">
 			<a href="http://localhost/INVENTARIO-FRONTEND/index.php?vista=home">
 			<img src="/INVENTARIO-FRONTEND/img/logosena.JPG">
@@ -51,7 +51,7 @@
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/cate_nuevo.php">Nuevo</a>
 							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/listascatego.php">Lista</a>
-							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/buscarcatego.php">Buscar</a>
+							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/buscarcategoria.php">Buscar</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">
@@ -67,11 +67,9 @@
 					</li>
 				</ul>
 			</div>
-
-	
 			<div class="row">
 				<div class="col">
-				<a href="actualizar.php?;?>" <button type="button" class="  btn btn-primary" style=" margin-top:-5px; margin-right:100px; "> Mi Cuenta </a> </button>
+				<a href="actualizar.php?;?>" <button type="button" class=" btn btn-primary" style=" margin-top:-5px; margin-right:100px; "> Mi Cuenta </a> </button>
 				</div>
 			</div>
 			<a href="../index.php" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesion </a></button>
@@ -82,15 +80,11 @@
 	</nav>
 </header>
 <body>
-	<div class="main" style="width: 1000px;">
-	<p class="sign fw-bold fs-4 text-center pt-3">Nuevas Categorias</p>
-		<form class="formregistro">
-			<input class="uno" type="text" align="center" placeholder="Nombres">
-			<input class="dos" type="text" align="center" placeholder="Ubicacion">
-			<br>
-
-            <button type="button" class="btn btn-primary" style="margin-top:30px; margin-left:450px;">Guardar </button>
-			
-	</div>
+	<form class="form-search" action="{{route('')}}" method="get" action="" align="center">
+		<input class="busqueda" type="busqueda" name="buscar" placeholder="buscar.." required>
+		<button class="fa fa-search" type="submit"> BUSCAR </button>
+		
+	</form>
 </body>
+</div>
 </html>

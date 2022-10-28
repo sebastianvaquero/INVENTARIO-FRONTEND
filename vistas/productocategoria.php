@@ -3,9 +3,9 @@
 
 <head>
 
-		<title>Registrar Categorias</title>
-<!-- Required meta tags -->
-<meta charset="utf-8">
+		<title>Buscar Categorias</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
@@ -81,16 +81,13 @@
 	</div>
 	</nav>
 </header>
-<body>
-	<div class="main" style="width: 1000px;">
-	<p class="sign fw-bold fs-4 text-center pt-3">Nuevas Categorias</p>
-		<form class="formregistro">
-			<input class="uno" type="text" align="center" placeholder="Nombres">
-			<input class="dos" type="text" align="center" placeholder="Ubicacion">
-			<br>
 
-            <button type="button" class="btn btn-primary" style="margin-top:30px; margin-left:450px;">Guardar </button>
-			
-	</div>
+<body>
+	<form class="form-search" action="{{route('')}}" method="get" action="" align="center">
+		<input class="busqueda" type="busqueda" name="buscar" placeholder="buscar.." required>
+		<button class="fa fa-search" type="submit"> BUSCAR </button>
+		
+	</form>
 </body>
+</div>
 </html>

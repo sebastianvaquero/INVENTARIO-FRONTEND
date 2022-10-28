@@ -130,14 +130,14 @@ a {
 }
 
 .dos{
-    margin-left:50px;
-    width: 200px;
+    margin-left:90px;
+    width: 400px;
     margin-top:20px;
 }
 
 .tres{
     margin-left:50px;
-    width: 145px;
+    width: 400px;
     margin-top:20px;
 }
 
@@ -169,6 +169,22 @@ a {
     width: 400px;
     margin-top:20px;
 }
+.nueve{
+    margin-left:90px;
+    width: 400px;
+    margin-top:20px;
+}
+
+.diez{
+    margin-left:50px;
+    width: 200px;
+    margin-top:20px;
+}
+.once{
+    margin-left:50px;
+    width: 200px;
+    margin-top:20px;
+}
 
 .notificationis-dangeris-light{
     margin-top: 500px;
@@ -193,7 +209,9 @@ a {
 
   }
 
-  
+  .espacio{
+    margin-left:45px;
+  }
   
   .ocultar1{
 margin-left:420px;

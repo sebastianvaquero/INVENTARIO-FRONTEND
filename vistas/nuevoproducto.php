@@ -70,7 +70,7 @@
 				<a href="actualizar.php?;?>" <button type="button" class=" btn btn-primary" style=" margin-top:-5px; margin-right:100px; "> Mi Cuenta </a> </button>
 				</div>
 			</div>
-			<a href="../index.php" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesion </a></button>
+			<a href="../index.php" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesi&oacute;n </a></button>
 	</div>
 	</div>
 	</div>
@@ -97,7 +97,5 @@
     <img src="{{ asset('imagesproducto/')}}" alt="">
     <input class="espacio" type="file" name="imagen"required>
 </div>
-
-
-
-            <button type="button" class="btn btn-primary" style="margin-top:30px; margin-left:450px;">Guardar </button>
+<button type="submit" class="btn btn-primary" style="margin-top:30px; margin-left:400px;">Guardar </button>
+			<button type="reset" value="Borrar" class="btn btn-secondary" style="margin-top:-63px; margin-left:520px;">Borrar </button>

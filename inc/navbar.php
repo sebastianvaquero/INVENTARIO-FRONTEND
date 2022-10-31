@@ -70,7 +70,7 @@
 					<a href="vistas/actualizar.php?vista=user_update&user_id_up=<?php echo $_SESSION['id']; ?>" <button type="button" class="  btn btn-primary" style=" margin-top:-5px; margin-right:100px; "> Mi Cuenta </a> </button>
 				</div>
 			</div>
-			<a href="index.php?vista=logout" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesion </a></button>
+			<a href="index.php?vista=logout" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesi&oacute;n </a></button>
 	</div>
 	</div>
 	</div>

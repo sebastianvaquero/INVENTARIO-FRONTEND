@@ -51,7 +51,7 @@
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/cate_nuevo.php">Nuevo</a>
 							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/listascatego.php">Lista</a>
-							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/buscarcatego.php">Buscar</a>
+							<a class="dropdown-item" href="/INVENTARIO-FRONTEND/vistas/buscarcategoria.php">Buscar</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">
@@ -74,7 +74,7 @@
 				<a href="actualizar.php?;?>" <button type="button" class="  btn btn-primary" style=" margin-top:-5px; margin-right:100px; "> Mi Cuenta </a> </button>
 				</div>
 			</div>
-			<a href="../index.php" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesion </a></button>
+			<a href="../index.php" <button type="button" class="btn btn-secondary" style=" margin-top:-5px; margin-right:100px; ">Cerrar sesi&oacute;n </a></button>
 	</div>
 	</div>
 	</div>
@@ -82,15 +82,19 @@
 	</nav>
 </header>
 <body>
+	<form name="form" action="listascatego.php" method="post">
 	<div class="main" style="width: 1000px;">
 	<p class="sign fw-bold fs-4 text-center pt-3">Nuevas Categorias</p>
 		<form class="formregistro">
-			<input class="uno" type="text" align="center" placeholder="Nombres">
-			<input class="dos" type="text" align="center" placeholder="Ubicacion">
+			<input class="uno" type="text" align="center" placeholder="Nombres" required>
+			<input class="dos" type="text" align="center" placeholder="Ubicaci&oacute;n"required>
+
 			<br>
 
-            <button type="button" class="btn btn-primary" style="margin-top:30px; margin-left:450px;">Guardar </button>
+            <button type="submit" class="btn btn-primary" style="margin-top:30px; margin-left:400px;">Guardar </button>
+			<button type="reset" value="Borrar" class="btn btn-secondary" style="margin-top:-63px; margin-left:520px;">Borrar </button>
 			
 	</div>
+	</form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-
+<!-- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -83,7 +83,52 @@
 	</nav>
 </header>
 
-<body>
+
+
+
+ 
+
+ <?php
+   /*  include_once 'conexion.PDO.php';
+//$stmt = $dsn -> prepare("SELECT * FROM datos");
+$stmt = $dbh -> prepare("SELECT * FROM producto");
+$stmt->execute();
+$datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach($datos as $fila){
+
+	$producto_id = $fila['Producto_id'];
+    $producto_codigo = $fila['Producto_codigo'];
+    $producto_nombre = $fila['Producto_nombre'];
+	$producto_precio = $fila['Producto_precio'];
+	$producto_stock = $fila['Producto_stock'];
+	$fotico = $fila['Producto_foto'];
+
+   
+    ?>
+<div class="col">
+    <div id="<?php echo $producto_nombre ?>" class="border-primary card">
+        <div class="justify-content-center aling-items-center">
+      <img src="" class="card-img-top" alt="...">
+        </div>
+      <hr class="text-primary">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo $producto_codigo;?></h5>
+        <p id="producto_nombre" class="card-text"><?php echo $producto_nombre ?></p>
+        <p id="producto_nombre" class="card-text"><?php echo $fotico ?></p>
+        <p id="producto_nombre" class="card-text"><?php echo '<img src="'.$fotico.'">' ?></p>
+
+        
+      </div>
+    </div>
+  </div>
+  <?php
+} */
+?> 
+
+
+
+
+ <body></body>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -109,7 +154,7 @@
     </tr>
   </tbody>
 </table>
-</body>
+</body> 
 </html>
 
 

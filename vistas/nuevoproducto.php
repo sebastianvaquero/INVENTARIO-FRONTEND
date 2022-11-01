@@ -1,3 +1,42 @@
+<?php
+
+   /* 
+    include("../INVENTARIO-FRONTEND/clases/conexionPDO.php");
+    include("../INVENTARIO-FRONTEND/clases/Productos.php");
+
+    $pro=new Productos($con);
+//print_r($pro);
+    if(isset($_POST["enviadatos"])){
+		$idp=$_POST['id'];           
+        $codp=$_POST['cod'];
+        $nomp=$_POST['nom'];
+        $prep=$_POST['pre'];
+        $stocp=$_POST['stoc'];
+        $producto_foto=$_FILES['producto_foto']['name'];
+        $ruta=$_FILES['producto_foto']['tmp_name'];
+        $destinop="fotoproductos/".$producto_foto;
+        copy($ruta,$destinop); 
+        $datop=$pro->registrar($idp,$codp, $nomp, $prep, $stocp, $destinop);
+
+        
+        if($datop){
+            echo'<script type="text/javascript"> alert("REGISTRO ALMACENADO CON EXITO!")</script>';
+            echo "<script> window.location.href = 'listaproductos.php';</script>";
+            //header("location: registra.php");
+        }else{
+            echo'<script type="text/javascript"> alert("NO SE PUDO ALMACENAR")</script>';
+            echo "<script> window.location.href = 'nuevosproducto.php';</script>";
+            //echo "No se registro";
+        }
+        
+        
+    }
+
+     */
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,10 +116,20 @@
 	</div>
 	</nav>
 </header>
+
+
+
+
+
 <body>
 	<div class="main" style="width: 1000px;">
 	<p class="sign fw-bold fs-4 text-center pt-3">Registrar Productos</p>
+	
 		<form class="formregistro">
+		<form  method="POST" action="listaproductos.php" enctype="multipart/form-data">
+
+
+
 		<input class="uno" type="text" align="center" placeholder="Codigo de barras">
 			<input class="nueve" type="text" align="center" placeholder="Nombre del producto">
 			<br><br>

@@ -99,3 +99,10 @@
 </body>
 </html>
 
+<!-- <input class="cuatro" type="email" align="center" placeholder="Categoria">  -->
+<br> <br>
+			<!-- <div class="casilla">
+    <label class="label" for=""></label>
+    <img src="{{ asset('imagesproducto/')}}" alt="">
+    <input class="espacio" type="file" name="imagen"required>
+</div> -->

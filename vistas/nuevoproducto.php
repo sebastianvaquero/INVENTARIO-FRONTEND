@@ -1,42 +1,3 @@
-<?php
-
-   /* 
-    include("../INVENTARIO-FRONTEND/clases/conexionPDO.php");
-    include("../INVENTARIO-FRONTEND/clases/Productos.php");
-
-    $pro=new Productos($con);
-//print_r($pro);
-    if(isset($_POST["enviadatos"])){
-		$idp=$_POST['id'];           
-        $codp=$_POST['cod'];
-        $nomp=$_POST['nom'];
-        $prep=$_POST['pre'];
-        $stocp=$_POST['stoc'];
-        $producto_foto=$_FILES['producto_foto']['name'];
-        $ruta=$_FILES['producto_foto']['tmp_name'];
-        $destinop="fotoproductos/".$producto_foto;
-        copy($ruta,$destinop); 
-        $datop=$pro->registrar($idp,$codp, $nomp, $prep, $stocp, $destinop);
-
-        
-        if($datop){
-            echo'<script type="text/javascript"> alert("REGISTRO ALMACENADO CON EXITO!")</script>';
-            echo "<script> window.location.href = 'listaproductos.php';</script>";
-            //header("location: registra.php");
-        }else{
-            echo'<script type="text/javascript"> alert("NO SE PUDO ALMACENAR")</script>';
-            echo "<script> window.location.href = 'nuevosproducto.php';</script>";
-            //echo "No se registro";
-        }
-        
-        
-    }
-
-     */
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,8 +79,47 @@
 </header>
 
 
+			<?php
+    include("../conexionPDO.php");
+    include("../clases/Productos.php");
+?>
+	
+	<?php if (!empty($conn)) {?>
+		$pro=new Productos($conn); 
 
+		<?php } ?>
 
+		<?php
+//print_r($pro);
+    if(isset($_POST["enviadatos"])){
+		//$idp=$_POST['id'];           
+        $codp=$_POST['cod'];
+        $nomp=$_POST['nom'];
+        $prep=$_POST['pre'];
+        $stocp=$_POST['stoc'];
+        $producto_foto=$_FILES['producto_foto']['name'];
+        $ruta=$_FILES['producto_foto']['tmp_name'];
+        $destinop="fotoproductos/".$producto_foto;
+        copy($ruta,$destinop); 
+        $datop=$pro->registrar($codp, $nomp, $prep, $stocp, $destinop);
+
+        
+        if($datop){
+            echo'<script type="text/javascript"> alert("REGISTRO ALMACENADO CON EXITO!")</script>';
+            echo "<script> window.location.href = 'nuevoproducto.php';</script>";
+            //header("location: registra.php");
+        }else{
+            echo'<script type="text/javascript"> alert("NO SE PUDO ALMACENAR")</script>';
+            echo "<script> window.location.href = 'nuevosproducto.php';</script>";
+            //echo "No se registro";
+        }
+        
+        
+    }
+
+     
+
+?>
 
 <body>
 	<div class="main" style="width: 1000px;">
@@ -130,21 +130,21 @@
 
 
 
-		<input class="uno" type="text" align="center" placeholder="Codigo de barras">
-			<input class="nueve" type="text" align="center" placeholder="Nombre del producto">
+		<input class="uno" type="text" name="cod" align="center" placeholder="Codigo de barras">
+			<input class="nueve" type="text" name="nom" align="center" placeholder="Nombre del producto">
 			<br><br>
-			<input class="diez" type="text" align="center" placeholder="Precio"> 	
-			<input class="once" type="text" align="center" placeholder="Stock">
+			<input class="diez" type="text" name="pre" align="center" placeholder="Precio"> 	
+			<input class="once" type="text" name="stoc" align="center" placeholder="Stock">
 			<br> <br>
 		
 			 
 
-<!-- <input class="cuatro" type="email" align="center" placeholder="Categoria">  -->
-			<br> <br>
-			<div class="casilla">
-    <label class="label" for=""></label>
-    <img src="{{ asset('imagesproducto/')}}" alt="">
-    <input class="espacio" type="file" name="imagen"required>
-</div>
-<button type="submit" class="btn btn-primary" style="margin-top:30px; margin-left:400px;">Guardar </button>
+
+
+<input type="file"  value="subir imagen"  name="producto_foto" id="producto_foto"><br>
+           </p>
+            
+
+<button type="submit" name="enviadatos" class="btn btn-primary" value="Guardar" style="margin-top:30px; margin-left:400px;"> Guardar </button>
 			<button type="reset" value="Borrar" class="btn btn-secondary" style="margin-top:-63px; margin-left:520px;">Borrar </button>
+		</form>	

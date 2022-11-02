@@ -1,4 +1,4 @@
-<!-- 
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -89,19 +89,19 @@
  
 
  <?php
-   /*  include_once 'conexion.PDO.php';
+    include_once '../conexionPDO.php';
 //$stmt = $dsn -> prepare("SELECT * FROM datos");
 $stmt = $dbh -> prepare("SELECT * FROM producto");
 $stmt->execute();
 $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach($datos as $fila){
 
-	$producto_id = $fila['Producto_id'];
+	// $producto_id = $fila['Producto_id'];
     $producto_codigo = $fila['Producto_codigo'];
     $producto_nombre = $fila['Producto_nombre'];
 	$producto_precio = $fila['Producto_precio'];
 	$producto_stock = $fila['Producto_stock'];
-	$fotico = $fila['Producto_foto'];
+	$fotico = $fila['producto_foto'];
 
    
     ?>
@@ -122,12 +122,12 @@ foreach($datos as $fila){
     </div>
   </div>
   <?php
-} */
+} 
 ?> 
 
 
 
-
+<!-- 
  <body></body>
 <table class="table table-bordered">
   <thead>
@@ -153,7 +153,7 @@ foreach($datos as $fila){
       
     </tr>
   </tbody>
-</table>
+</table> -->
 </body> 
 </html>
 

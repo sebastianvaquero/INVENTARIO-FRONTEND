@@ -1,5 +1,5 @@
 <?php
-$dbname="personas";
+$dbname="inventario";
 $user="root";
 $password="";
 try {
@@ -8,7 +8,7 @@ try {
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     );
     $dbh = new PDO($dsn, $user, $password);
-    echo "CONECTADO CON LA BASE DE DATOS";
+    echo "";
 } catch (PDOException $e){
     echo $e->getMessage();
 }

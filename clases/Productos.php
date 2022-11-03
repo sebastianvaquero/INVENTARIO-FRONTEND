@@ -1,10 +1,9 @@
 <?php
 
 class Productos{
-    
-    private $conn;
-    public function __construct($conn){
-        $this->conn=$conn;
+    private $con;
+    public function __construct($con){
+        $this->con=$con;
     }
 
     // Funciones Registro
@@ -19,13 +18,12 @@ class Productos{
 
     }
 
-    private function insertar($cod, $nom, $pre, $stoc, $dest){
+    private function insertar($cod,$prod, $propre, $stoc, $dest){
 
-        $query=$this->conn->prepare("INSERT INTO producto (Producto_codigo, Producto_nombre, Producto_precio, Producto_stock,producto_foto) VALUES (:producto_codigo,:producto_nombre,:producto_precio,:producto_stock,:destino)"); 
-        //$query->bindParam(":producto_id", $id);
-        $query->bindParam(":producto_codigo", $cod); 
-        $query->bindParam(":producto_nombre", $nom);
-        $query->bindParam(":producto_precio", $pre);
+        $query=$this->con->prepare("INSERT INTO producto (Producto_codigo, Producto_nombre, Producto_precio, Producto_stock,foto) VALUES (:producto_codigo, :producto_nombre, :producto_precio, :producto_stock, :destino) "); 
+        $query->bindParam(":producto_codigo", $cod);
+        $query->bindParam(":producto_nombre", $prod);
+        $query->bindParam(":producto_precio", $propre);
         $query->bindParam(":producto_stock", $stoc);
         $query->bindParam(":destino", $dest);
         
@@ -36,6 +34,5 @@ class Productos{
     
     
 
-} 
-
+}
 ?>

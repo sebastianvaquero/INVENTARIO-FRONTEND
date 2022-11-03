@@ -79,72 +79,87 @@
 </header>
 
 
-			<?php
-    include("../conexionPDO.php");
-    include("../clases/Productos.php");
-?>
-	
-	<?php if (!empty($conn)) {?>
-		$pro=new Productos($conn); 
 
-		<?php } ?>
+<!--  opcion con base de datos personas  -->
+<?php
 
-		<?php
+   
+include("/xampp/htdocs/INVENTARIO-FRONTEND/clases/conexion.php");
+    include("/xampp/htdocs/INVENTARIO-FRONTEND/clases/Productos.php");
+
+    $pro=new Productos($con);
 //print_r($pro);
     if(isset($_POST["enviadatos"])){
-		//$idp=$_POST['id'];           
+       
         $codp=$_POST['cod'];
-        $nomp=$_POST['nom'];
-        $prep=$_POST['pre'];
+        $prodp=$_POST['prod'];
+        $proprep=$_POST['propre'];
         $stocp=$_POST['stoc'];
-        $producto_foto=$_FILES['producto_foto']['name'];
-        $ruta=$_FILES['producto_foto']['tmp_name'];
-        $destinop="fotoproductos/".$producto_foto;
+        $foto=$_FILES['foto']['name'];
+        $ruta=$_FILES['foto']['tmp_name'];
+        $destinop="fotoproductos".$foto; // Falta (solucionar) el  almacenamiento de las fotos en la ruta del aplicativo
         copy($ruta,$destinop); 
-        $datop=$pro->registrar($codp, $nomp, $prep, $stocp, $destinop);
+        $productop=$pro->registrar($codp,$prodp,$proprep,$stocp,$destinop);
 
         
-        if($datop){
+        if($productop){
             echo'<script type="text/javascript"> alert("REGISTRO ALMACENADO CON EXITO!")</script>';
             echo "<script> window.location.href = 'nuevoproducto.php';</script>";
-            //header("location: registra.php");
+            //header("location: nuevoproducto.php");
         }else{
             echo'<script type="text/javascript"> alert("NO SE PUDO ALMACENAR")</script>';
-            echo "<script> window.location.href = 'nuevosproducto.php';</script>";
+            echo "<script> window.location.href = 'nuevoproducto.php';</script>";
             //echo "No se registro";
         }
         
         
     }
 
-     
+    
 
 ?>
 
-<body>
+ <form  method="POST" action="nuevoproducto.php" enctype="multipart/form-data">
+                
+        <div class="inputsr">  
+            <h2>Sing up</h2>
+            <p>Codigo del Producto: </p><input type="text" name="cod" placeholder="cedula">
+            <p>Nombre del Producto: </p><input type="text" name="prod" placeholder="nombre">
+            <p>Precio: </p><input type="text" name="propre" placeholder="direccion">
+            <p>Stock: </p><input type="text" name="stoc" placeholder="telefono">
+           <p>
+           <h4>Foto del producto</h4> <br>
+            <input type="file" value="subir imagen" name="foto" id="foto"><br>
+           </p>
+            
+
+            <input type="submit" name="enviadatos" value="Guardar Registro">
+        </div>
+          </form> 
+
+
+
+<!--  <body>
 	<div class="main" style="width: 1000px;">
 	<p class="sign fw-bold fs-4 text-center pt-3">Registrar Productos</p>
 	
 		<form class="formregistro">
-		<form  method="POST" action="listaproductos.php" enctype="multipart/form-data">
+		<form  method="POST" action="nuevoproducto.php" enctype="multipart/form-data">
 
 
 
 		<input class="uno" type="text" name="cod" align="center" placeholder="Codigo de barras">
-			<input class="nueve" type="text" name="nom" align="center" placeholder="Nombre del producto">
+			<input class="nueve" type="text" name="prod" align="center" placeholder="Nombre del producto">
 			<br><br>
-			<input class="diez" type="text" name="pre" align="center" placeholder="Precio"> 	
+			<input class="diez" type="text" name="propre" align="center" placeholder="Precio"> 	
 			<input class="once" type="text" name="stoc" align="center" placeholder="Stock">
 			<br> <br>
-		
+			<input type="file" value="subir imagen" name="foto" id="foto"><br>
 			 
+			<input type="submit" name="enviadatos" value="Guardar">
 
-
-
-<input type="file"  value="subir imagen"  name="producto_foto" id="producto_foto"><br>
-           </p>
-            
-
-<button type="submit" name="enviadatos" class="btn btn-primary" value="Guardar" style="margin-top:30px; margin-left:400px;"> Guardar </button>
+ <button type="submit" name="enviadatos" class="btn btn-primary" value="Guardar" style="margin-top:30px; margin-left:400px;"> Guardar </button> 
 			<button type="reset" value="Borrar" class="btn btn-secondary" style="margin-top:-63px; margin-left:520px;">Borrar </button>
 		</form>	
+ -->
+

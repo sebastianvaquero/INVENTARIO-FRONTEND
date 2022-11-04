@@ -97,7 +97,7 @@ include("/xampp/htdocs/INVENTARIO-FRONTEND/clases/conexion.php");
         $stocp=$_POST['stoc'];
         $foto=$_FILES['foto']['name'];
         $ruta=$_FILES['foto']['tmp_name'];
-        $destinop="fotoproductos".$foto; // Falta (solucionar) el  almacenamiento de las fotos en la ruta del aplicativo
+        $destinop="../fotoproductos/img".$foto; // Falta (solucionar) el  almacenamiento de las fotos en la ruta del aplicativo
         copy($ruta,$destinop); 
         $productop=$pro->registrar($codp,$prodp,$proprep,$stocp,$destinop);
 
@@ -118,48 +118,35 @@ include("/xampp/htdocs/INVENTARIO-FRONTEND/clases/conexion.php");
     
 
 ?>
-
+<body>
+	<div class="main" style="width: 1000px;">
+	<p class="sign fw-bold fs-4 text-center pt-3">Registrar Productos</p>
  <form  method="POST" action="nuevoproducto.php" enctype="multipart/form-data">
                 
         <div class="inputsr">  
-            <h2>Sing up</h2>
-            <p>Codigo del Producto: </p><input type="text" name="cod" placeholder="cedula">
-            <p>Nombre del Producto: </p><input type="text" name="prod" placeholder="nombre">
-            <p>Precio: </p><input type="text" name="propre" placeholder="direccion">
-            <p>Stock: </p><input type="text" name="stoc" placeholder="telefono">
-           <p>
-           <h4>Foto del producto</h4> <br>
+      
+           <input type="text"class="uno" name="cod" placeholder="Codigo de barras">
+          <input type="text" class="nueve" name="prod" placeholder="Nombre del producto"> <br><br>
+            <input type="text"class="diez" name="propre" placeholder="Precio">
+         <input type="text" class="once" name="stoc" placeholder="Stock"><br><br>
             <input type="file" value="subir imagen" name="foto" id="foto"><br>
-           </p>
+         
             
 
-            <input type="submit" name="enviadatos" value="Guardar Registro">
+           <button type="submit" name="enviadatos" class="btn btn-primary" value="Guardar" style="margin-top:30px; margin-left:400px;"> Guardar </button> 
+			<button type="reset" value="Borrar" class="btn btn-secondary" style="margin-top:-63px; margin-left:520px;">Borrar </button>
         </div>
+		</div>
           </form> 
 
 
-
-<!--  <body>
-	<div class="main" style="width: 1000px;">
-	<p class="sign fw-bold fs-4 text-center pt-3">Registrar Productos</p>
+		  </body>
+</html>
 	
-		<form class="formregistro">
-		<form  method="POST" action="nuevoproducto.php" enctype="multipart/form-data">
+<footer class="main-footer">
+		<strong >Copyright &copy; 2022 <a href="https://comunicaciongraficasena.blogspot.com">Cenigraf</a>.</strong> Todos los derechos reservados.
+	</footer>
+	
+</body>
 
-
-
-		<input class="uno" type="text" name="cod" align="center" placeholder="Codigo de barras">
-			<input class="nueve" type="text" name="prod" align="center" placeholder="Nombre del producto">
-			<br><br>
-			<input class="diez" type="text" name="propre" align="center" placeholder="Precio"> 	
-			<input class="once" type="text" name="stoc" align="center" placeholder="Stock">
-			<br> <br>
-			<input type="file" value="subir imagen" name="foto" id="foto"><br>
-			 
-			<input type="submit" name="enviadatos" value="Guardar">
-
- <button type="submit" name="enviadatos" class="btn btn-primary" value="Guardar" style="margin-top:30px; margin-left:400px;"> Guardar </button> 
-			<button type="reset" value="Borrar" class="btn btn-secondary" style="margin-top:-63px; margin-left:520px;">Borrar </button>
-		</form>	
- -->
-
+</html>

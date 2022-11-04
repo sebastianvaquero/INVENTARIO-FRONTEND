@@ -66,3 +66,6 @@ if (isset($_POST['login_usuario']) && isset($_POST['login_clave'])) {
 ?>
 </form>
 </div>
+
+
+

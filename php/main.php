@@ -5,6 +5,8 @@
 		$pdo = new PDO('mysql:host=localhost;dbname=inventario', 'root', '');
 		return $pdo;
 	}
+
+
 	# Verificar datos #
 	function verificar_datos($filtro,$cadena){
 		if(preg_match("/^".$filtro."$/", $cadena)){
@@ -13,6 +15,8 @@
             return true;
         }
 	}
+
+
 	# Limpiar cadenas de texto #
 	function limpiar_cadena($cadena){
 		$cadena=trim($cadena);
@@ -43,7 +47,10 @@
 		$cadena=stripslashes($cadena);
 		return $cadena;
 	}
+
+
 	# Funcion renombrar fotos #
+	
 /* 	function renombrar_fotos($nombre){
 		$nombre=str_ireplace(" ", "_", $nombre);
 		$nombre=str_ireplace("/", "_", $nombre);
@@ -56,9 +63,11 @@
 		return $nombre;
 	}
  */
+
 	# Funcion paginador de tablas #
 	function paginador_tablas($pagina,$Npaginas,$url,$botones){
 		$tabla='<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">';
+
 		if($pagina<=1){
 			$tabla.='
 			<a class="pagination-previous is-disabled" disabled >Anterior</a>
@@ -71,6 +80,7 @@
 				<li><span class="pagination-ellipsis">&hellip;</span></li>
 			';
 		}
+
 		$ci=0;
 		for($i=$pagina; $i<=$Npaginas; $i++){
 			if($ci>=$botones){
@@ -83,6 +93,7 @@
 			}
 			$ci++;
 		}
+
 		if($pagina==$Npaginas){
 			$tabla.='
 			</ul>
@@ -96,6 +107,7 @@
 			<a class="pagination-next" href="'.$url.($pagina+1).'" >Siguiente</a>
 			';
 		}
+
 		$tabla.='</nav>';
 		return $tabla;
 	}

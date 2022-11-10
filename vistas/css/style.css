@@ -102,7 +102,7 @@ a {
 
 .notification{
     text-align: center;
-    margin-top: -10px;
+   
     color:red;
 }
 
@@ -124,16 +124,45 @@ a {
 
 
 .uno{
-    margin-left:50px;
-    width: 400px;
+    margin-left:150px;
+    width: 250px;
     margin-top:20px;
-}
+}xx
 
 .dos{
     margin-left:90px;
     width: 400px;
     margin-top:20px;
 }
+
+.uno11{
+    margin-left:50px;
+    width: 400px;
+    margin-top:20px;
+}
+
+.dos22{
+    margin-left:90px;
+    width: 400px;
+    margin-top:20px;
+}
+
+/* formulario de registrar usuario */
+.uno1{
+    margin-left:50px;
+    width: 400px;
+    margin-top:20px;
+} 
+
+
+.dos2{
+    margin-left:90px;
+    width: 400px;
+    margin-top:20px;
+}
+
+/* formulario de nuevas categorias */
+
 
 .tres{
     margin-left:50px;
@@ -171,7 +200,7 @@ a {
 }
 .nueve{
     margin-left:90px;
-    width: 400px;
+    width: 250px;
     margin-top:20px;
 }
 
@@ -181,8 +210,8 @@ a {
     margin-top:20px;
 }
 .once{
-    margin-left:50px;
-    width: 200px;
+    margin-left:68px;
+    width: 250px;
     margin-top:20px;
 }
 
@@ -238,4 +267,16 @@ margin-top: 20px;
     margin-left:25px;
     width:60px;
     height:60px;
+  }
+  .combobox1{
+    margin-left:80px;
+  
+  }
+  .combobox{
+    margin-left:80px; 
+  }
+  #foto{
+    margin-left:320px;
+    margin-top: 20px;
+
   }

@@ -84,8 +84,8 @@
 <div class="main1" style="width: 1000px;">
 		<p class="sign fw-bold fs-4 text-center pt-3">Actualizar Usuario</p>
 		<form action="../../INVENTARIO-FRONTEND/" class="formregistro">
-			<input class="uno " type="text"  placeholder="Nombres" required >
-			<input class="dos" type="text"  placeholder="Apellidos"required ><br>
+			<input class="uno11 " type="text"  placeholder="Nombres" required >
+			<input class="dos22" type="text"  placeholder="Apellidos"required ><br>
 			<input class="tres" type="text"  placeholder="Usuario"required >
 			<input class="cuatro" type="email"  placeholder="Email"required ><br><br>
 			<p class="actualizartexto">Si desea actualizar la clave de este usuario por favor llene los 2 campos. SI NO desea actualizarlos deje los campos vacios</p>

@@ -125,6 +125,22 @@ include("/xampp/htdocs/INVENTARIO-FRONTEND/clases/conexion.php");
                 
         <div class="inputsr">  
       
+		<!-- combo box de categorias -->
+		
+<section class="combobox"> Seleccionar Categoria:</section>  <select name="" class="combobox1">
+
+
+<?php 
+include("/xampp/htdocs/INVENTARIO-FRONTEND/clases/conexion.php");
+$consulta="SELECT *FROM categoria";
+$ejecutar=mysqli_query($mysqli,$consulta) or die(mysqli_error($mysqli));
+?>
+<?php foreach ($ejecutar as $opciones):?>
+	<option value="<?php echo $opciones['categorianombre']?>"><?php echo $opciones['categorianombre']?></option>
+	<?php endforeach ?>
+
+
+
            <input type="text"class="uno" name="cod" placeholder="Codigo de barras">
           <input type="text" class="nueve" name="prod" placeholder="Nombre del producto"> <br><br>
             <input type="text"class="diez" name="propre" placeholder="Precio">

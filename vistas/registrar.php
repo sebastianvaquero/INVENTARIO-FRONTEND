@@ -134,8 +134,8 @@
 	
 	<p class="sign fw-bold fs-4 text-center pt-3">Registrar Usuario</p>
 		<form action="/INVENTARIO-FRONTEND/php/usuario_guardar.php" method="POST" class="FormularioAjax" autocomplete="off" >
-			<input class="uno" type="text" align="center" placeholder="Nombres" name="usuario_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required >
-			<input class="dos" type="text" align="center" placeholder="Apellidos"name="usuario_apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required >
+			<input class="uno1" type="text" align="center" placeholder="Nombres" name="usuario_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required >
+			<input class="dos2" type="text" align="center" placeholder="Apellidos"name="usuario_apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required >
 			<br>
 			<input class="tres" type="text" align="center" placeholder="Usuario" name="usuario_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required >
 			<input class="cuatro" type="email" align="center" placeholder="Email"name="usuario_email" maxlength="70" required >

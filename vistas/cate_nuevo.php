@@ -86,7 +86,9 @@
 	<div class="main" style="width: 1000px;">
 	<p class="sign fw-bold fs-4 text-center pt-3">Nuevas Categorias</p>
 		<form class="formregistro">
-			<input class="uno" type="text" name="nombres" align="center" placeholder="Nombres" required>
+
+		<input class="uno" type="text" name="categoriaId" align="center" placeholder="Categoria de producto" required>
+			<input class="uno" type="text" name="categorianombre" align="center" placeholder="Nombres" required>
 			<input class="dos" type="text" name="ubicacion" align="center" placeholder="Ubicaci&oacute;n"required>
 
 			<br>

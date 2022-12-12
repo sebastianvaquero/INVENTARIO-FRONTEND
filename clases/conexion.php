@@ -6,7 +6,7 @@ try{
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     $con->exec("SET CHARACTER SET UTF8");
-    echo "conectado!!";
+    //echo "conectado!!";
 } catch(PDOException $th){ 
     die('Error en la conexion' . $th->getMessage());
 }
@@ -21,3 +21,9 @@ try{
 		exit();
 	}
 ?>
+
+<?php
+//conexion  formulario registrar categoria
+	$conex = mysqli_connect("localhost","root","","inventario"); 
+
+	?>

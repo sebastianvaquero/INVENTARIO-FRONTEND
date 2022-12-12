@@ -1,0 +1,555 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 05-12-2022 a las 23:17:48
+-- Versión del servidor: 10.4.25-MariaDB
+-- Versión de PHP: 7.4.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `inventario`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `almacenado`
+--
+
+CREATE TABLE `almacenado` (
+  `ID_ALMACENADO` int(20) NOT NULL,
+  `NOMBRE_ALMACENADO` varchar(50) NOT NULL,
+  `CATEGORIA_NOMBRE` varchar(50) NOT NULL,
+  `SERIAL_ALMACENADO` varchar(50) NOT NULL,
+  `CANTIDAD_ALMACENADO` varchar(50) NOT NULL,
+  `OBSERV_ALMACENADO` varchar(50) NOT NULL,
+  `ESTADO` varchar(50) NOT NULL,
+  `GFECHA_REVISION` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `almacenado`
+--
+
+INSERT INTO `almacenado` (`ID_ALMACENADO`, `NOMBRE_ALMACENADO`, `CATEGORIA_NOMBRE`, `SERIAL_ALMACENADO`, `CANTIDAD_ALMACENADO`, `OBSERV_ALMACENADO`, `ESTADO`, `GFECHA_REVISION`) VALUES
+(11, 'COMPUTADOR 11', 'ALMACENADO', '2UA4021MJM', '1', 'PRENDE BIEN', 'FUNCIONAL', '2022-12-15'),
+(12, 'COMPUTADOR 12', 'ALMACENADO', '2UA4021FJG', '1', 'NO FUNCIONA', 'NO FUNCIONAL', '2022-12-10'),
+(13, 'COMPUTADOR 13', 'ALMACENADO', '2UA4021FH6 ', '1', 'FUNCIONA BIEN', 'FUNCIONAL', NULL),
+(14, 'COMPUTADOR 14', 'ALMACENADO', '2UA40111R7', '1', 'FUNCIONA BIEN', 'FUNCIONAL', NULL),
+(15, 'COMPUTADOR 15', 'ALMACENADO', '2UA3491SZM', '1', 'PRENDE BIEN', 'FUNCIONAL', NULL),
+(16, 'COMPUTADOR 16', 'ALMACENADO', '2UA3491SYY', '1', 'NO PROCESA', 'NO FUNCIONAL', NULL),
+(17, 'COMPUTADOR 17', 'ALMACENADO', '2UA350246M', '1', 'PRENDE BIEN PERO SE DEMORA EN APAGAR', 'FUNCIONAL', NULL),
+(18, 'COMPUTADOR 18', 'ALMACENADO', '2UA4021FHY', '1', 'PRENDE BIEN', 'FUNCIONAL', NULL),
+(19, 'COMPUTADOR 19', 'ALMACENADO', '2UA3491SZJ', '1', 'PRENDE PERO NO TIENE SISTEMA OPERATIVO', 'NO FUNCIONAL', NULL),
+(2, 'COMPUTADOR 2', 'ALMACENADO', '2UA40111S6', '1', 'SIRVE BIEN', 'FUNCIONAL', NULL),
+(20, 'COMPUTADOR 20', 'ALMACENADO', '2UA35024DF', '1', 'PRENDE PERO ES LENTO', 'REGULAR', NULL),
+(21, 'COMPUTADOR 21', 'ALMACENADO', '2UA3491SYV', '1', 'PRENDE', 'FUNCIONAL', NULL),
+(22, 'COMPUTADOR 22', 'ALMACENADO', '2UA3491GKD', '1', 'PRENDE BIEN', 'FUNCIONAL', NULL),
+(23, 'COMPUTADOR 23', 'ALMACENADO', '2UA3491GK1', '1', 'PRENDE BIEN', 'FUNCIONAL', NULL),
+(24, 'COMPUTADOR 24', 'ALMACENADO', '2UA3491SYN', '1', 'PRENDE BIEN', 'FUNCIONAL', NULL),
+(25, 'COMPUTADOR 25', 'ALMACENADO', '2UA3491SZ3', '1', 'NO PRENDE-NO TIENE RAM', 'NO FUNCIONAL', NULL),
+(26, 'COMPUTADOR 26', 'ALMACENADO', '2UA3500Z4N', '1', 'NO PASA SISTEMA OPERATIVO', 'NO FUNCIONAL', NULL),
+(27, 'COMPUTADOR 27', 'ALMACENADO', '2UA35024D8', '1', 'NO PASA SISTEMA OPERATIVO', 'NO FUNCIONAL', NULL),
+(28, 'COMPUTADOR 28', 'ALMACENADO', '2UA3491SYP', '1', 'NO TIENE PUERTOS DE CONEXIÓN', 'NO FUNCIONAL', NULL),
+(29, 'COMPUTADOR 29', 'ALMACENADO', '2UA35024GB', '1', 'PRENDE BIEN', 'FUNCIONAL', NULL),
+(3, 'COMPUTADOR 3', 'ALMACENADO', '2UA35024FG', '1', 'SIRVE PERO ES LENTO', 'REGULAR', NULL),
+(30, 'COMPUTADOR 30', 'ALMACENADO', '2UA4021FF8', '1', 'NO TIENE MEMORIA', 'NO FUNCIONAL', NULL),
+(31, 'COMPUTADOR 31', 'ALMACENADO', '2UA4021FJ0', '1', 'NO PRENDE EL COMPUTADOR PERO SI LA CPU', 'NO FUNCIONAL', NULL),
+(32, 'COMPUTADOR 32', 'ALMACENADO', '2UA4021FFC', '1', 'NO TIENE SISTEMA OPERATIVO', 'NO FUNCIONAL', NULL),
+(33, 'COMPUTADOR 33', 'ALMACENADO', 'USQQ77', '1', 'NO FUNCIONA', 'NO FUNCIONAL', NULL),
+(34, 'COMPUTADOR 34', 'ALMACENADO', '87085', '1', 'NO FUNCIONA', 'NO FUNCIONAL', NULL),
+(35, 'COMPUTADOR 35', 'ALMACENADO', 'M70AD', '1', 'NO FUNCIONA', 'NO FUNCIONAL', NULL),
+(36, 'COMPUTADOR 36', 'ALMACENADO', '2UA4021FDJ', '1', 'FUNCIONA BIEN', 'FUNCIONAL', NULL),
+(4, 'COMPUTADOR 4', 'ALMACENADO', '2UA4021MJJ', '1', 'SIRVE Y ES RÁPIDO', 'FUNCIONAL', NULL),
+(1, 'COMPUTADOR 48', 'ALMACENADO', '92176168', '1', 'PRENDE PERO NO PROCESA', 'NO FUNCIONAL', '2022-12-16'),
+(5, 'COMPUTADOR 5', 'ALMACENADO', '2UA4021FJB', '1', 'PRENDE PERO NO PROCESA', 'REGULAR', NULL),
+(6, 'COMPUTADOR 6', 'ALMACENADO', '2UA4021MJN', '1', 'SIRVE BIEN', 'FUNCIONAL', NULL),
+(7, 'COMPUTADOR 7', 'ALMACENADO', '2UA35024FH', '1', 'NO PRENDE', 'NO FUNCIONAL', NULL),
+(8, 'COMPUTADOR 8', 'ALMACENADO', '2UA4021FFW', '1', 'PRENDE BIEN', 'FUNCIONAL', NULL),
+(10, 'COMPUTADOR 85', 'ALMACENADO', '2UA4021FFL', '1', 'SIRVE BIEN', '', '0000-00-00'),
+(84, 'COMPUTADORCITO', 'ALMACENADO', 'AKSMDKAMS65165', '20', 'NINGUNA', 'FUNCIONAL', '0000-00-00'),
+(38, 'PORTATIL DE ', 'ALMACENADO', '849841ASDAS', '1', 'FUNCIONAL', '', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `articulos`
+--
+
+CREATE TABLE `articulos` (
+  `ID_ARTICULOS` int(20) NOT NULL,
+  `NOMBRE_MARCA` varchar(50) NOT NULL,
+  `CATEGORIA_NOMBRE` varchar(50) NOT NULL,
+  `PLACA` varchar(50) DEFAULT NULL,
+  `SERIAL` varchar(50) NOT NULL,
+  `GUAYA` varchar(2) DEFAULT NULL,
+  `MOUSE` varchar(2) DEFAULT NULL,
+  `MOUSEPAD` varchar(2) DEFAULT NULL,
+  `MEMORIA` varchar(2) DEFAULT NULL,
+  `LAPIZ` varchar(2) DEFAULT NULL,
+  `ADAPTADOR_PODER` varchar(2) DEFAULT NULL,
+  `CABLE_PODER` varchar(2) DEFAULT NULL,
+  `CARGADOR` varchar(2) DEFAULT NULL,
+  `BATERIA` varchar(2) DEFAULT NULL,
+  `ESTADO` varchar(50) DEFAULT NULL,
+  `MANT_REALIZAR` varchar(50) DEFAULT NULL,
+  `OBSERV_ESTADO` varchar(50) DEFAULT NULL,
+  `FECHA_REVISION` varchar(50) DEFAULT NULL,
+  `NOMBRE_ENCARGADO` varchar(50) DEFAULT NULL,
+  `CARGO` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `articulos`
+--
+
+INSERT INTO `articulos` (`ID_ARTICULOS`, `NOMBRE_MARCA`, `CATEGORIA_NOMBRE`, `PLACA`, `SERIAL`, `GUAYA`, `MOUSE`, `MOUSEPAD`, `MEMORIA`, `LAPIZ`, `ADAPTADOR_PODER`, `CABLE_PODER`, `CARGADOR`, `BATERIA`, `ESTADO`, `MANT_REALIZAR`, `OBSERV_ESTADO`, `FECHA_REVISION`, `NOMBRE_ENCARGADO`, `CARGO`) VALUES
+(1, 'HP PROBOOK', 'ARTICULOS', '92171011396', '5CD9515DSW', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'JUAN DAVID RODRIGUEZ CORTES', 'APRENDIZ'),
+(2, 'HP PROBOOK', 'ARTICULOS', '92171011207', '5CD9515BZC', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Maria Florez', 'APRENDIZ'),
+(3, 'HP PROBOOK', 'ARTICULOS', '92171011435', '5CD9515D3J', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'JUAN DAVID DICELIS PEÑUELA', 'APRENDIZ'),
+(4, 'HP PROBOOK', 'ARTICULOS', '92171011227', '5CD9515C6D', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'ESPIRAL TV', 'APRENDIZ'),
+(5, 'HP PROBOOK', 'ARTICULOS', '92171011370', '5CD9515DB7', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Yanin Zaray Reyes Leal', 'APRENDIZ'),
+(6, 'HP PROBOOK', 'ARTICULOS', '92171011195', '5CD9515BP5', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'JEFFRY LOPEZ PINZÓN', 'APRENDIZ'),
+(7, 'HP PROBOOK', 'ARTICULOS', '92171011370', '5CD9515DB7', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'DAÑADO\n', NULL, NULL, '2022-04-18', NULL, NULL),
+(8, 'HP PROBOOK', 'ARTICULOS', '92171011390', '5CD9515CQQ', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'MICHAEL RODRÍGUEZ VIVAS', 'APRENDIZ'),
+(9, 'HP PROBOOK', 'ARTICULOS', '92171011176', '5CD9515CLG', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'OSCAR IVAN ARRIETA ACHURY', 'APRENDIZ'),
+(10, 'HP PROBOOK', 'ARTICULOS', '92171011193', '5CD9515CLM', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'David Andres Segura Florez', 'APRENDIZ'),
+(11, 'HP PROBOOK', 'ARTICULOS', '92171011381', '5CD9515DNC', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Sherith Dayana Daza Urrego', 'APRENDIZ'),
+(12, 'HP PROBOOK', 'ARTICULOS', '92171011188', '5CD9515CKF', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Laura Camargo', 'APRENDIZ'),
+(13, 'HP PROBOOK', 'ARTICULOS', '92171011298', '5CD9515F9L', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'JUAN CAMILO CARABALLO GARNICA', 'APRENDIZ'),
+(14, 'HP PROBOOK', 'ARTICULOS', '92171011336', '5CD9515D86', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'APRENDIZ'),
+(15, 'HP PROBOOK', 'ARTICULOS', '92171011410', '5CD9515DRZ', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Samuel Pinilla', 'APRENDIZ'),
+(16, 'HP PROBOOK', 'ARTICULOS', '92171011276', '5CD9515F88', 'si', 'si', 'si', 'si', NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'VANESSA ESTUPIÑAN MILLAN	VANESSA ESTUPIÑAN MILLAN', 'APRENDIZ'),
+(17, 'WACOM ONE', 'ARTICULOS', NULL, '134690', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'MICHAEL RODRÍGUEZ VIVAS', 'APRENDIZ'),
+(18, 'WACOM ONE', 'ARTICULOS', NULL, '134687', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'David Andres Segura Florez', 'APRENDIZ'),
+(19, 'WACOM ONE', 'ARTICULOS', NULL, '134593', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'David Guillermo Sánchez Leguizamon', 'APRENDIZ'),
+(20, 'WACOM ONE', 'ARTICULOS', NULL, '134689', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Sherith Dayana Daza Urrego', 'APRENDIZ'),
+(21, 'WACOM ONE', 'ARTICULOS', NULL, '134591', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'APRENDIZ'),
+(22, 'WACOM ONE', 'ARTICULOS', NULL, '134594', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Yanin Zaray Reyes Leal', 'APRENDIZ'),
+(23, 'WACOM ONE', 'ARTICULOS', NULL, '143725', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'MARIA FLOREZ', 'APRENDIZ'),
+(24, 'WACOM ONE', 'ARTICULOS', NULL, '143743', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Emily Martin', 'APRENDIZ'),
+(25, 'WACOM ONE', 'ARTICULOS', NULL, '134688', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'APRENDIZ'),
+(26, 'WACOM ONE', 'ARTICULOS', NULL, '143744', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Yesica Alexandra Rincon Ibarbo', 'APRENDIZ'),
+(27, 'WACOM ONE', 'ARTICULOS', NULL, '143746', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'APRENDIZ'),
+(28, 'WACOM ONE', 'ARTICULOS', NULL, '143756', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'APRENDIZ'),
+(29, 'WACOM ONE', 'ARTICULOS', NULL, '143759\n', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Samuel Pinilla ', 'APRENDIZ'),
+(30, 'WACOM ONE', 'ARTICULOS', NULL, '143757', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'JUAN DAVID RODRIGUEZ CORTES', 'APRENDIZ'),
+(31, 'WACOM ONE', 'ARTICULOS', NULL, '143758', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Geraldine Martin', 'APRENDIZ'),
+(32, 'WACOM ONE', 'ARTICULOS', NULL, '143721', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'APRENDIZ'),
+(33, 'WACOM ONE', 'ARTICULOS', NULL, '143722', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'LEONARDO', 'Instructor'),
+(34, 'WACOM ONE', 'ARTICULOS', NULL, '143723', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'JULIAN TOVAR', 'APRENDIZ'),
+(35, 'WACOM ONE', 'ARTICULOS', NULL, '143720', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', '-LIBRE-', NULL),
+(36, 'WACOM ONE', 'ARTICULOS', NULL, '143735', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', '-LIBRE-', NULL),
+(37, 'WACOM ONE', 'ARTICULOS', NULL, '134592', NULL, NULL, NULL, NULL, NULL, 'si', 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', '-LIBRE-', NULL),
+(38, 'NIKON COOLPIX P7800', 'ARTICULOS', NULL, '30002716', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'si', 'si', 'OPTIMO', NULL, NULL, '2022-04-18', 'INCOM', 'APRENDIZ'),
+(39, 'CANON REBEL T5', 'ARTICULOS', '92171934', '192073090236', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'si', 'si', 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'APRENDIZ'),
+(40, 'CANON EFS 18-55MM', 'ARTICULOS', NULL, '3276000691', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'APRENDIZ'),
+(41, 'DAVIS & STANDFORD V12 FLUID HEAD', 'ARTICULOS', NULL, '100189230', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'INCOM', 'Aprendiz'),
+(42, 'MANFROTTO 190\r\n', 'ARTICULOS', NULL, 'QWU010946764', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'DAÑADO', NULL, NULL, '2022-04-18', 'INCOM', 'Aprendiz'),
+(43, 'MANFROTTO 190', 'ARTICULOS', NULL, 'WZQ010948807', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'INCOM', 'Aprendiz'),
+(44, 'MACBOOK PRO', 'ARTICULOS', NULL, '1001109282', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'si', NULL, 'OPTIMO', NULL, NULL, '2022-04-18', NULL, NULL),
+(45, 'HP OPTIPLEX 7470 A10', 'ARTICULOS', NULL, '92179501', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'si', NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Fabian Guillermo Gómez Sánchez', 'Aprendiz'),
+(46, 'HP PROBOOK', 'ARTICULOS', '92171011263', 'SCD9515DZZ', 'si', 'si', 'si', 'si', NULL, NULL, NULL, 'si', NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Derly Natalia Cholo Saavedra', 'Aprendiz'),
+(47, 'HP PROBOOK', 'ARTICULOS', '92171011444', '5CD9515D1P', 'si', 'si', 'si', 'si', NULL, NULL, NULL, 'si', NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'JULIAN TOVAR', 'Aprendiz'),
+(48, 'iMac (Retina 4K, 21.5-inch, Late 2015)\n', 'ARTICULOS', NULL, 'D25SQ110GG7F', NULL, 'si', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'MARWIM STEBAN MORENO GUERRERO', 'Aprendiz'),
+(49, 'iMac (Retina 4K, 21.5-inch, Late 2015)', 'ARTICULOS', NULL, 'D25SM0MXGG7F', NULL, 'si', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'VALENTINA CASTIBLANCO PARRA', 'Aprendiz'),
+(50, 'iMac (Retina 4K, 21.5-inch, Late 2015)', 'ARTICULOS', NULL, 'D255Q0ELGG7F', NULL, 'si', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, 'NO POSEE CARGADOR', '2022-04-18', 'Maria Alejandra Zanguña Rosa', 'Aprendiz'),
+(51, 'iMac (Retina 4K, 21.5-inch, Late 2015)', 'ARTICULOS', NULL, 'D255M0Q5GG7F', NULL, 'si', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Fabian Guillermo Gómez Sánchez', 'Aprendiz'),
+(52, 'CANON VIXIA HF630)', 'ARTICULOS', NULL, '43725', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'si', 'OPTIMO', NULL, NULL, '2022-04-18', 'ESPIRAL TV', 'Aprendiz'),
+(53, 'MACBOOK PRO)', 'ARTICULOS', NULL, '101000000000', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'si', NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Emily Martin', 'Aprendiz'),
+(54, 'MACBOOK PRO)', 'ARTICULOS', NULL, '9217109572', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'si', NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Erick Yoan Sanchez Martinez', 'Aprendiz'),
+(55, 'MACBOOK PRO)', 'ARTICULOS', NULL, '9217109570', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'si', NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'Fabian Guillermo Gómez Sánchez', 'Aprendiz'),
+(56, 'iMac (21.5-inch, Late 2009)', 'ARTICULOS', NULL, 'W8003v405PC', NULL, 'si', NULL, NULL, NULL, NULL, 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'Aprendiz'),
+(57, 'iMac (21.5-inch, Late 2009)', 'ARTICULOS', NULL, 'W8011689N5PC', NULL, 'si', NULL, NULL, NULL, NULL, 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'Aprendiz'),
+(58, 'iMac (21.5-inch, Late 2009)', 'ARTICULOS', NULL, 'WKQ169gfspc', NULL, 'si', NULL, NULL, NULL, NULL, 'si', NULL, NULL, 'OPTIMO', NULL, NULL, '2022-04-18', 'FOTOGRAFIA', 'Aprendiz'),
+(59, 'HP PROBOOK', 'ARTICULOS', '92171011359', '5CD9515DCX', 'si', 'si', 'si', 'si', NULL, NULL, NULL, 'si', NULL, 'DAÑADO', NULL, NULL, '2022-04-18', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cables`
+--
+
+CREATE TABLE `cables` (
+  `ID_CABLE` int(20) NOT NULL,
+  `TIPO_CABLE` varchar(50) NOT NULL,
+  `CATEGORIA_NOMBRE` varchar(50) NOT NULL,
+  `CANTIDAD` varchar(50) NOT NULL,
+  `CFECHA_REVISION` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cables`
+--
+
+INSERT INTO `cables` (`ID_CABLE`, `TIPO_CABLE`, `CATEGORIA_NOMBRE`, `CANTIDAD`, `CFECHA_REVISION`) VALUES
+(6, 'ANTENAS', 'CABLES', '4', '2022-11-10'),
+(7, 'AUDIO', 'CABLES', '20', '2022-12-23'),
+(1, 'CABLES DE INTERNET', 'CABLES', '20', '2022-12-14'),
+(3, 'CORRIENTE', 'CABLES', '43', NULL),
+(4, 'MICRO USB', 'CABLES', '1', NULL),
+(13, 'Sonora', 'Cables', '20', '0000-00-00'),
+(5, 'V8', 'CABLES', '1', NULL),
+(2, 'VGA', 'CABLES', '9', NULL),
+(12, 'VISUAL', 'CABLES', '50', '2022-12-15');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cargo`
+--
+
+CREATE TABLE `cargo` (
+  `ID_CARGO` int(20) NOT NULL,
+  `CARGO` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categoria`
+--
+
+CREATE TABLE `categoria` (
+  `ID_CATEGORIA` int(20) NOT NULL,
+  `CATEGORIA_NOMBRE` varchar(50) NOT NULL,
+  `NODO` varchar(50) NOT NULL,
+  `DESCRIPCION` varchar(50) NOT NULL,
+  `CANTIDAD` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`ID_CATEGORIA`, `CATEGORIA_NOMBRE`, `NODO`, `DESCRIPCION`, `CANTIDAD`) VALUES
+(4, 'ALMACENADO', 'RED DE MEDIOS', 'RED DE MEDIOS', 39),
+(3, 'ARTICULOS', 'RED DE MEDIOS', 'RED DE MEDIOS', 59),
+(1, 'CABLES', 'RED DE MEDIOS', 'RED DE MEDIOS', 8),
+(2, 'MOBILIARIO', 'RED DE MEDIOS', 'RED DE MEDIOS', 20);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `encargados`
+--
+
+CREATE TABLE `encargados` (
+  `ID_ENCARGADO` int(20) NOT NULL,
+  `NOMBRE_ENCARGADO` varchar(50) NOT NULL,
+  `CARGO` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `numero_documento` varchar(20) DEFAULT NULL,
+  `tipo_documento` varchar(50) DEFAULT NULL,
+  `luagar_sede` varchar(50) DEFAULT NULL,
+  `telefono` int(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `encargados`
+--
+
+INSERT INTO `encargados` (`ID_ENCARGADO`, `NOMBRE_ENCARGADO`, `CARGO`, `email`, `numero_documento`, `tipo_documento`, `luagar_sede`, `telefono`) VALUES
+(14, '-LIBRE-', 'APRENDIZ', '', '', '', '', 0),
+(10, 'David Andres Segura Florez', 'APRENDIZ', '', '', '', '', 0),
+(61, 'David Guillermo Sánchez Leguizamon', 'APRENDIZ', '', '', '', '', 0),
+(69, 'Derly Natalia Cholo Saavedra', 'APRENDIZ', '', '', '', '', 0),
+(62, 'Emily Martin', 'APRENDIZ', '', '', '', '', 0),
+(74, 'Erick Yoan Sanchez Martinez', 'APRENDIZ', '', '', '', '', 0),
+(5, 'ESPIRAL TV', 'APRENDIZ', '', '', '', '', 0),
+(68, 'Fabian Guillermo Gómez Sánchez', 'APRENDIZ', '', '', '', '', 0),
+(2, 'FOTOGRAFIA', 'APRENDIZ', '', '', '', '', 0),
+(64, 'Geraldine Martin', 'APRENDIZ', '', '', '', '', 0),
+(67, 'INCOM', 'APRENDIZ', '', '', '', '', 0),
+(7, 'JEFFRY LOPEZ PINZÓN', 'APRENDIZ', '', '', '', '', 0),
+(53, 'JUAN CAMILO CARABALLO GARNICA', 'APRENDIZ', '', '', '', '', 0),
+(4, 'JUAN DAVID DICELIS PEÑUELA', 'APRENDIZ', '', '', '', '', 0),
+(1, 'JUAN DAVID RODRIGUEZ CORTES', 'APRENDIZ', '', '', '', '', 0),
+(66, 'JULIAN TOVAR', 'APRENDIZ', '', '', '', '', 0),
+(12, 'Laura Camargo ', 'APRENDIZ', '', '', '', '', 0),
+(65, 'LEONARDO', 'INSTRUCTOR', '', '', '', '', 0),
+(72, 'Maria Alejandra Zanguña Rosa', 'APRENDIZ', '', '', '', '', 0),
+(3, 'Maria Florez', 'APRENDIZ', '', '', '', '', 0),
+(70, 'MARWIM STEBAN MORENO GUERRERO', 'APRENDIZ', '', '', '', '', 0),
+(8, 'MICHAEL RODRÍGUEZ VIVAS', 'APRENDIZ', '', '', '', '', 0),
+(9, 'OSCAR IVAN ARRIETA ACHURY', 'APRENDIZ', '', '', '', '', 0),
+(54, 'Samuel Pinilla ', 'APRENDIZ', '', '', '', '', 0),
+(11, 'Sherith Dayana Daza Urrego', 'APRENDIZ', '', '', '', '', 0),
+(71, 'VALENTINA CASTIBLANCO PARRA', 'APRENDIZ', '', '', '', '', 0),
+(55, 'VANESSA ESTUPIÑAN MILLAN	VANESSA ESTUPIÑAN MILLAN', 'APRENDIZ', '', '', '', '', 0),
+(6, 'Yanin Zaray Reyes Leal', 'APRENDIZ', '', '', '', '', 0),
+(63, 'Yesica Alexandra Rincon Ibarbo', 'APRENDIZ', '', '', '', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mobiliario`
+--
+
+CREATE TABLE `mobiliario` (
+  `ID_MOBILIARIO` int(11) NOT NULL,
+  `OBJETO` varchar(50) DEFAULT NULL,
+  `DESCRIPCION` varchar(50) NOT NULL,
+  `CATEGORIA_NOMBRE` varchar(50) NOT NULL,
+  `CANTIDAD` int(50) NOT NULL,
+  `ESTADO` varchar(50) NOT NULL,
+  `OBSERVACIONES` varchar(100) NOT NULL,
+  `MFECHA_REVISION` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `mobiliario`
+--
+
+INSERT INTO `mobiliario` (`ID_MOBILIARIO`, `OBJETO`, `DESCRIPCION`, `CATEGORIA_NOMBRE`, `CANTIDAD`, `ESTADO`, `OBSERVACIONES`, `MFECHA_REVISION`) VALUES
+(19, NULL, 'IMPRESORA COLOR LASERJET ENTERPRISE M750', 'ALMACENADO', 1, 'FUNCIONAL', 'NINGUNO', NULL),
+(2, NULL, 'MESA BLANCA PEQUEÑA ', 'ALMACENADO', 2, 'FUNCIONAL', 'NINGUNO', NULL),
+(7, NULL, 'MESA CAFÉ', 'ALMACENADO', 2, 'FUNCIONAL', 'NINGUNA', NULL),
+(4, NULL, 'MESA CUADRADA', 'ALMACENADO', 3, 'FUNCIONAL', 'NINGUNA', NULL),
+(1, NULL, 'MESA ESCRITORIO ', 'ALMACENADO', 2, 'FUNCIONAL', 'NINGUNA', NULL),
+(3, NULL, 'MESA ILUSTRADA', 'ALMACENADO', 1, 'FUNCIONAL', 'NINGUNA', NULL),
+(5, NULL, 'MESA LARGA BLANCA', 'ALMACENADO', 3, 'FUNCIONAL', 'NINGUNA', NULL),
+(8, NULL, 'MESA MEDIANA ', 'ALMACENADO', 3, 'FUNCIONAL', 'NINGUNO', NULL),
+(6, NULL, 'MESA TRIANGULAR', 'ALMACENADO', 17, 'FUNCIONAL', 'NINGUNA', NULL),
+(20, NULL, 'SAMSUNG MULTIXPRESS M5370LX', 'ALMACENADO', 1, 'FUNCIONAL', 'NINGUNO', NULL),
+(10, NULL, 'SILLA CAFÉ', 'ALMACENADO', 2, 'FUNCIONAL', 'NINGUNA', NULL),
+(12, NULL, 'SILLA ERGONÓMICA BLANCA CON NEGRO', 'ALMACENADO', 3, 'FUNCIONAL', 'NINGUNA', NULL),
+(18, NULL, 'SILLA ERGONÓMICA CON CABEZAL OVALADO NEGRA', 'ALMACENADO', 1, 'FUNCIONAL', 'NINGUNO', NULL),
+(17, NULL, 'SILLA ERGONÓMICA CON CABEZAL RECTANGULAR NEGRA', 'ALMACENADO', 3, 'FUNCIONAL', 'NINGUNO', NULL),
+(14, NULL, 'SILLA ERGONÓMICA CUADRADA AZUL', 'ALMACENADO', 3, 'FUNCIONAL', 'NINGUNO', NULL),
+(16, NULL, 'SILLA ERGONÓMICA CUADRADA NEGRA', 'ALMACENADO', 4, 'FUNCIONAL', 'NINGUNO', NULL),
+(9, NULL, 'SILLA ERGONÓMICA NEGRA OVALADA', 'ALMACENADO', 2, 'FUNCIONAL', 'NINGUNA', NULL),
+(13, NULL, 'SILLA ERGONÓMICA OVALADA AZUL', 'ALMACENADO', 13, 'DAÑADA', '1 DAÑANA', NULL),
+(11, NULL, 'SILLA ERGONÓMICA VERDE', 'ALMACENADO', 1, 'FUNCIONAL', 'NINGUNA', NULL),
+(15, NULL, 'SILLA NEGRA', 'ALMACENADO', 2, 'FUNCIONAL', 'NINGUNO', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `prestamo`
+--
+
+CREATE TABLE `prestamo` (
+  `ID_FECHA` int(20) NOT NULL,
+  `NOMBRE_ALMACENADO` varchar(50) NOT NULL,
+  `FECHA_ENTREGA` date NOT NULL,
+  `ESTADO_ENTREGA` varchar(50) NOT NULL,
+  `FECHA_SALIDA` date DEFAULT NULL,
+  `ESTADO_SALIDA` varchar(50) NOT NULL,
+  `NOMBRE_ENCARGADO` varchar(50) NOT NULL,
+  `CARGO` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `idUsuario` int(11) NOT NULL,
+  `nombreUsuario` varchar(50) NOT NULL,
+  `apellidoUsuario` varchar(50) NOT NULL,
+  `ID_CARGO` int(11) NOT NULL,
+  `emailUsuario` varchar(50) NOT NULL,
+  `usuarioUsuario` varchar(50) NOT NULL,
+  `usuarioClave` varchar(20) NOT NULL,
+  `usuarioClave2` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`idUsuario`, `nombreUsuario`, `apellidoUsuario`, `ID_CARGO`, `emailUsuario`, `usuarioUsuario`, `usuarioClave`, `usuarioClave2`) VALUES
+(2, 'Administrador', 'Principal', 1, 'admin@gmail.com', 'Administrador', 'administrador15', 'administrador15'),
+(3, 'Aprendiz', 'Principal', 3, 'aprendiz@gmail.com', 'Aprendiz', 'aprendiz15', 'aprendiz15'),
+(7, 'Instructor', 'Principal', 2, 'instructor@gmail.com', 'Instructor', 'instructor15', 'instructori15');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `almacenado`
+--
+ALTER TABLE `almacenado`
+  ADD PRIMARY KEY (`NOMBRE_ALMACENADO`),
+  ADD KEY `fkguardado` (`ID_ALMACENADO`),
+  ADD KEY `fkcategorianombre` (`CATEGORIA_NOMBRE`);
+
+--
+-- Indices de la tabla `articulos`
+--
+ALTER TABLE `articulos`
+  ADD PRIMARY KEY (`ID_ARTICULOS`),
+  ADD KEY `fkcategorianombre` (`CATEGORIA_NOMBRE`),
+  ADD KEY `fkencargado` (`NOMBRE_ENCARGADO`),
+  ADD KEY `fkcargo` (`CARGO`),
+  ADD KEY `NOMBRE_MARCA` (`NOMBRE_MARCA`);
+
+--
+-- Indices de la tabla `cables`
+--
+ALTER TABLE `cables`
+  ADD PRIMARY KEY (`TIPO_CABLE`),
+  ADD KEY `ID_CABLE` (`ID_CABLE`),
+  ADD KEY `fkcategorianombre` (`CATEGORIA_NOMBRE`);
+
+--
+-- Indices de la tabla `cargo`
+--
+ALTER TABLE `cargo`
+  ADD PRIMARY KEY (`ID_CARGO`),
+  ADD KEY `CARGO` (`CARGO`);
+
+--
+-- Indices de la tabla `categoria`
+--
+ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`CATEGORIA_NOMBRE`),
+  ADD KEY `fkcategoria` (`ID_CATEGORIA`);
+
+--
+-- Indices de la tabla `encargados`
+--
+ALTER TABLE `encargados`
+  ADD PRIMARY KEY (`NOMBRE_ENCARGADO`),
+  ADD KEY `fkencargado` (`ID_ENCARGADO`),
+  ADD KEY `fkcargo` (`CARGO`);
+
+--
+-- Indices de la tabla `mobiliario`
+--
+ALTER TABLE `mobiliario`
+  ADD PRIMARY KEY (`DESCRIPCION`),
+  ADD KEY `ID_MOBILIARIO` (`ID_MOBILIARIO`),
+  ADD KEY `fkcategorianombre` (`CATEGORIA_NOMBRE`);
+
+--
+-- Indices de la tabla `prestamo`
+--
+ALTER TABLE `prestamo`
+  ADD PRIMARY KEY (`FECHA_ENTREGA`),
+  ADD KEY `fkfecha` (`ID_FECHA`),
+  ADD KEY `fkencargado` (`NOMBRE_ENCARGADO`),
+  ADD KEY `fkcargo` (`CARGO`),
+  ADD KEY `NOMBRE_ENCARGADO` (`NOMBRE_ENCARGADO`),
+  ADD KEY `NOMBRE_ALMACENADO` (`NOMBRE_ALMACENADO`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`idUsuario`),
+  ADD KEY `fkidcargo` (`ID_CARGO`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `almacenado`
+--
+ALTER TABLE `almacenado`
+  MODIFY `ID_ALMACENADO` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+
+--
+-- AUTO_INCREMENT de la tabla `articulos`
+--
+ALTER TABLE `articulos`
+  MODIFY `ID_ARTICULOS` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
+--
+-- AUTO_INCREMENT de la tabla `cables`
+--
+ALTER TABLE `cables`
+  MODIFY `ID_CABLE` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT de la tabla `cargo`
+--
+ALTER TABLE `cargo`
+  MODIFY `ID_CARGO` int(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `ID_CATEGORIA` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `encargados`
+--
+ALTER TABLE `encargados`
+  MODIFY `ID_ENCARGADO` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4534;
+
+--
+-- AUTO_INCREMENT de la tabla `mobiliario`
+--
+ALTER TABLE `mobiliario`
+  MODIFY `ID_MOBILIARIO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT de la tabla `prestamo`
+--
+ALTER TABLE `prestamo`
+  MODIFY `ID_FECHA` int(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `almacenado`
+--
+ALTER TABLE `almacenado`
+  ADD CONSTRAINT `almacenado_ibfk_1` FOREIGN KEY (`CATEGORIA_NOMBRE`) REFERENCES `categoria` (`CATEGORIA_NOMBRE`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `articulos`
+--
+ALTER TABLE `articulos`
+  ADD CONSTRAINT `articulos_ibfk_1` FOREIGN KEY (`CATEGORIA_NOMBRE`) REFERENCES `categoria` (`CATEGORIA_NOMBRE`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `articulos_ibfk_3` FOREIGN KEY (`NOMBRE_ENCARGADO`) REFERENCES `encargados` (`NOMBRE_ENCARGADO`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `cables`
+--
+ALTER TABLE `cables`
+  ADD CONSTRAINT `cables_ibfk_1` FOREIGN KEY (`CATEGORIA_NOMBRE`) REFERENCES `categoria` (`CATEGORIA_NOMBRE`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `mobiliario`
+--
+ALTER TABLE `mobiliario`
+  ADD CONSTRAINT `mobiliario_ibfk_1` FOREIGN KEY (`CATEGORIA_NOMBRE`) REFERENCES `categoria` (`CATEGORIA_NOMBRE`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `prestamo`
+--
+ALTER TABLE `prestamo`
+  ADD CONSTRAINT `prestamo_ibfk_1` FOREIGN KEY (`NOMBRE_ENCARGADO`) REFERENCES `encargados` (`NOMBRE_ENCARGADO`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `prestamo_ibfk_3` FOREIGN KEY (`NOMBRE_ALMACENADO`) REFERENCES `almacenado` (`NOMBRE_ALMACENADO`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

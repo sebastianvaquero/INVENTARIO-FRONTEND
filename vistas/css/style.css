@@ -2,6 +2,17 @@
     color: #FFFFFF;
 }
 
+ul{
+    list-style: none;
+}
+
+.nav li ul li{
+position: relative;
+}
+.nav li ul li ul{
+    right: -140px;
+    top: 0px;
+}
 body {
     background-color: #ffffff;
     font-family: 'Ubuntu', sans-serif;
@@ -27,6 +38,17 @@ body {
     box-shadow: 0px 11px 35px 2px #979797;
     align-content: center;
 }
+.main3{
+    align-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 1000px;
+    height: 530px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px #979797;
+}
+
 .sign {
     color: #39A900;
     font-family: 'Ubuntu', sans-serif;
@@ -122,17 +144,40 @@ a {
     margin-left:200px;;
 }
 
+.form-group{
+    margin-left: 335px;
+    width: 300px;
+    margin-top: -50px;
+}
 
 .uno{
-    margin-left:150px;
+    margin-left: 130px;
+    width: 250px;
+    margin-top: 20px;
+}.UNO{
+    margin-left:100px;
     width: 250px;
     margin-top:20px;
-}xx
-
+}
 .dos{
-    margin-left:90px;
-    width: 400px;
-    margin-top:20px;
+    margin-left: 100px;
+    width: 250px;
+    margin-top: 20px;
+}
+.DOS{
+    margin-left: 100px;
+    width: 250px;
+    margin-top: 20px;
+}
+.ESTADO{
+    margin-left: 50px;
+}
+.Articulos{
+    margin-left: 10px;
+}
+.descripcion{
+    margin-left: 150px;
+    
 }
 
 .uno11{
@@ -199,7 +244,7 @@ a {
     margin-top:20px;
 }
 .nueve{
-    margin-left:90px;
+    margin-left:30px;
     width: 250px;
     margin-top:20px;
 }
@@ -210,9 +255,33 @@ a {
     margin-top:20px;
 }
 .once{
-    margin-left:68px;
+    margin-left: 30px;
     width: 250px;
-    margin-top:20px;
+    margin-top: 20px;
+}
+
+.doce{
+    margin-left: 253px;
+    width: 250px;
+    margin-top: -90px;
+}
+
+.trece{
+    margin-left: 630px;
+    width: 250px;
+    margin-top: 20px;
+}
+
+.catorce{
+    margin-left: 30px;
+    width: 250px;
+    margin-top: 90px;
+}
+
+.quince{
+    margin-left: 65px;
+    width: 250px;
+    margin-top: 20px;
 }
 
 .notificationis-dangeris-light{
@@ -280,3 +349,22 @@ margin-top: 20px;
     margin-top: 20px;
 
   }
+
+  .seleccionmultiple{
+    margin-top: -105px;
+    margin-left: 330px;
+
+  }
+
+  .seleccionmultiple2{
+    margin-top: -48.05px;
+    margin-left: 550px;
+}
+
+
+.lafecha{
+    margin-left:20px;
+    margin-top: 20px;
+    
+}
+  
